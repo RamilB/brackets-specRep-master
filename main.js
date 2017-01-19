@@ -45,7 +45,7 @@ define(function (require, exports, module) {
 				htmlContent = htmlContent.replace(/“/g,"\"");
 				htmlContent = htmlContent.replace(/”/g,"\"");
 				htmlContent = htmlContent.replace(/\s&\s/g,"&amp;");
-			    htmlContent = htmlContent.replace(чукча," Оля чукча");
+			    htmlContent = htmlContent.replace("чукча"," Оля чукча");
 				activeText.setText(htmlContent);
 
             // restore cursor and scroll positions
