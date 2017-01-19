@@ -1,11 +1,11 @@
 {
-    "name": "brackets-spec-rep",
-    "title": "brackets specRep - Special Character Replacer",
-    "version": "1.0.0",
+    "name": "brackets-RepSpecSymbol",
+    "title": "brackets RepSpecSymbol-Replace Array Special Symbol",
+    "version": "1.0.1",
     "description": "Extension that searches through and replaces any special characters with relevant code equivalent.",
-    "homepage": "https://github.com/jPARK-BiP/brackets-specRep",
-    "author": "James Park jpark.bip@gmail.com (https://github.com/jPARK-BiP)",
-    "license": "MIT",
+    "homepage": "",
+    "author": "",
+    "license": "",
     "categories":"snippets",
     "keywords": [
         "special",
