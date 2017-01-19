@@ -1,5 +1,5 @@
 {
-    "name": "brackets-RepSpecSymbol",
+    "name": "brackets-rep-spec-symbol",
     "title": "brackets RepSpecSymbol-Replace Array Special Symbol",
     "version": "1.0.1",
     "description": "Extension that searches through and replaces any special characters with relevant code equivalent.",
