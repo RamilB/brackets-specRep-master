@@ -28,15 +28,16 @@ define(function (require, exports, module) {
 
             var htmlContent = activeText.getText();
 
-            var replaceIn=[['/é/g','&#233;']
-							,['/ë/g','&#235;']
-							,['/\s&\s/g','&amp;']
-							]
+            var replaceIn=[
+				[/é/g,"&#233;"]
+				,[/ë/g,"&#235;"]
+				,[/\s&\s/g,"&amp;"]
+				]
 			// store current cursor and scroll positions
             var cursorPos = mainWindow.getCursorPos(),
                 scrollPos = mainWindow.getScrollPos();
 
-				
+			
 			for (var i=0;i<replaceIn.length;i++)
 			{
 				htmlContent = htmlContent.replace(replaceIn[i][0],replaceIn[i][1]);
@@ -66,7 +67,7 @@ define(function (require, exports, module) {
     //menu.addMenuItem(MY_COMMAND_ID);
     
     // We could also add a key binding at the same time:
-    menu.addMenuItem(MY_COMMAND_ID, "Ctrl-Alt-0");
+    menu.addMenuItem(MY_COMMAND_ID, "Ctrl-Shift-0");
     // (Note: "Ctrl" is automatically mapped to "Cmd" on Mac)
 
     exports.replaceSpecials = replaceSpecials;
