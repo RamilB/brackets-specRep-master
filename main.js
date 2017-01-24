@@ -15,7 +15,9 @@ define(function (require, exports, module) {
 		EditorManager  = brackets.getModule("editor/EditorManager"),
         Menus          = brackets.getModule("command/Menus");
 
-    
+
+
+		
     // Function to run when the menu item is clicked
     function replaceSpecials() {
 
@@ -26,29 +28,22 @@ define(function (require, exports, module) {
 
             var htmlContent = activeText.getText();
 
-            // store current cursor and scroll positions
+            var replaceIn=[['/é/g','&#233;']
+							,['/ë/g','&#235;']
+							,['/\s&\s/g','&amp;']
+							]
+			// store current cursor and scroll positions
             var cursorPos = mainWindow.getCursorPos(),
                 scrollPos = mainWindow.getScrollPos();
 
-				htmlContent = htmlContent.replace(/\u2013/g,"&ndash;");
-				htmlContent = htmlContent.replace(/\u2014/g,"&mdash;");
-				htmlContent = htmlContent.replace(/\u0091/g,"'");
-				htmlContent = htmlContent.replace(/\u0092/g,"'");
-				htmlContent = htmlContent.replace(/\u0027/g,"'");
-				htmlContent = htmlContent.replace(/\u00A3/g,"&pound;");
-				htmlContent = htmlContent.replace(/:tm:/g,"&#153;");
-				htmlContent = htmlContent.replace(/:tick:/g,"&#10004;");
-				htmlContent = htmlContent.replace(/:c:/g,"&#169;");
-				htmlContent = htmlContent.replace(/:r:/g,"&#174;");
-				htmlContent = htmlContent.replace(/’/g,"'");
-				htmlContent = htmlContent.replace(/‘/g,"'");
-				htmlContent = htmlContent.replace(/“/g,"\"");
-				htmlContent = htmlContent.replace(/”/g,"\"");
-				htmlContent = htmlContent.replace(/\s&\s/g,"&amp;");
-			    	htmlContent = htmlContent.replace(/чукча/g," Оля чукча");
-				htmlContent = htmlContent.replace(/é/g,"&#233");
-				htmlContent = htmlContent.replace(/ë/g,"&#235");
-		activeText.setText(htmlContent);
+				
+			for (var i=0;i<replaceIn.length;i++)
+			{
+				htmlContent = htmlContent.replace(replaceIn[i][0],replaceIn[i][1]);
+			}
+	
+				
+			activeText.setText(htmlContent);
 
             // restore cursor and scroll positions
             mainWindow.setCursorPos(cursorPos);
