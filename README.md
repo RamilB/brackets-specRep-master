@@ -4,23 +4,6 @@ Brackets extension that will replace certain special characters (listed below) f
 
 Replaced characters (minus the '.'):
 ===
-short dash to &.ndash;
-
-long dash to &.mdash;
-
-£ to &.pound;
-
-:tm: to the TM logo &.#153;
-
-:tick: to a heavy ascii tick &.#10004;
-
-:c: to the copyright logo &.#169;
-
-:r: to the registered logo &.#174;
-
-’ to '
-
-“ and ” to "
 
 & (with a space on either side) to &.amp;
 
