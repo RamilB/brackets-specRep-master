@@ -134,7 +134,7 @@ define(function (require, exports, module) {
 				,[/‰/g,	"&permil;"]
 				,[/‾/g,	"&oline;"]
 				,[/€/g,	"&euro;"]
-				,[/™/g,	"&trade;"]
+		    		,[/™/g,	"&trade;"]
 				,[/←/g,	"&larr;"]
 				,[/↑/g,	"&uarr;"]
 				,[/→/g,	"&rarr;"]
@@ -152,6 +152,7 @@ define(function (require, exports, module) {
 				,[/≡/g,	"&equiv;"]
 				,[/≤/g,	"&le;"]
 				,[/≥/g,	"&ge;"]
+		    		,[/’/g,	"'"]
 				]
 			// store current cursor and scroll positions
             var cursorPos = mainWindow.getCursorPos(),
